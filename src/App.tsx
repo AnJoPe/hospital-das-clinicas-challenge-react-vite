@@ -1,11 +1,15 @@
-import Comp from "./Comp";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
-export default function App(){
+export default function App() {
   return (
     <>
-      <h1>Primeiro Componente</h1>
-      <Comp></Comp>
+      <div className='bg-white flex h-screen'>
+        <Sidebar />
+        <main className='p-3 grow'>
+          <Outlet />
+        </main>
+      </div>
     </>
-  )
-  
+  );
 }
