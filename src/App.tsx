@@ -4,12 +4,12 @@ import { Outlet } from "react-router-dom";
 export default function App() {
   return (
     <>
-      <div className='bg-white flex h-screen'>
+      <main className='bg-white flex h-screen font-[Inter]'>
         <Sidebar />
-        <main className='p-3 grow'>
+        <div className='p-3 grow flex flex-col items-center'>
           <Outlet />
-        </main>
-      </div>
+        </div>
+      </main>
     </>
   );
 }

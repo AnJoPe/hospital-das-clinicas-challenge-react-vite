@@ -5,7 +5,7 @@ export default function QuemSomos() {
   return (
     <>
       <Header titulo='Quem Somos' icone='./Icons/quem_somos_icon.svg' />
-      <main className='flex items-center gap-5'>
+      <div className='flex justify-center gap-10 pt-12'>
         <Integrante
           imagem='../src/Assets/Integrantes/andre_rosa.png'
           nome='André Rosa Colombo'
@@ -27,7 +27,7 @@ export default function QuemSomos() {
           github='https://github.com/pmiranda27'
           linkedin='https://www.linkedin.com/in/pedro-henrique-miranda-de-vasconcelos/'
         />
-      </main>
+      </div>
     </>
   );
 }
