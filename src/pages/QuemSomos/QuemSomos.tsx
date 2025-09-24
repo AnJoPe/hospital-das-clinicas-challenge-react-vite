@@ -1,12 +1,14 @@
 import Header from "../../components/Header/Header";
+import Navbar from "../../components/Navbar/Navbar";
 import Integrante from "../../components/Integrante/Integrante";
 
 export default function QuemSomos() {
   return (
     <>
-      <div className='w-[84%] fixed right-0 p-3'>
+      <div className='absolute right-0 w-full md:w-[77%] lg:w-[81%] xl:w-[84%]' id='estrutura-pagina-menu-selector'>
         <Header titulo='Quem Somos' icone='./Icons/quem_somos_icon.svg' />
-        <div className='flex justify-center gap-10 pt-12'>
+        <Navbar />
+        <div className='flex flex-col items-center gap-6 py-8 lg:flex-row lg:flex-wrap lg:justify-center xl:gap-10'>
           <Integrante
             imagem='../src/Assets/Integrantes/andre_rosa.png'
             nome='André Rosa Colombo'
