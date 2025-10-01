@@ -1,19 +1,22 @@
+import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Pergunta from "../../components/Pergunta/Pergunta";
 
 export default function FAQ() {
+  const { open } = useSidebar();
   return (
     <>
-      <div className='absolute right-0 w-full md:w-[77%] lg:w-[81%] xl:w-[84%]' id='estrutura-pagina-menu-selector'>
-        <Header titulo='Perguntas Frequentes' icone='./Icons/faq_icon.svg' />
+      <div
+        className={`absolute right-0 z-0 w-full overflow-hidden transition-all duration-300 ${
+          open ? "md:w-[77%] lg:w-[81%] xl:w-[84%]" : "md:w-[93%] lg:w-[94.5%] xl:w-[96%]"
+        }`}>
+        <Header titulo='Perguntas Frequentes' icone='./Icons/faq_icon.svg' alt='Ícone de Dúvida Simbolizando a página de FAQ' />
         <Navbar />
         <div className='flex flex-col items-center m-auto py-7 w-[90%]'>
           <Pergunta
             pergunta='O que é uma consulta online ou híbrida?'
-            resposta='Consultas online são feitas por vídeo chamada, sem a
-                    necessidade de ir até o hospital. Já as consultas híbridas combinam atendimentos presenciais e
-                    virtuais, dependendo da necessidade do paciente.'
+            resposta='Consultas online são feitas por vídeo chamada, sem a necessidade de ir até o hospital. Já as consultas híbridas combinam atendimentos presenciais e virtuais, dependendo da necessidade do paciente.'
           />
           <hr className='my-5 border-2 border-[#68bfc2] rounded mx-10 shadow-md w-[80%]' />
           <Pergunta
@@ -38,9 +41,7 @@ export default function FAQ() {
           <hr className='my-5 border-2 border-[#68bfc2] rounded mx-10 shadow-md w-[80%]' />
           <Pergunta
             pergunta='Essa plataforma é feita pelo Hospital das Clínicas?'
-            resposta='Não! Essa plataforma foi feita por uma equipe, de estudantes da FIAP, participante do Desafio fornecido pelo Hospital das Clínicas. Nosso objetivo é auxiliar aqueles que encontram dificuldades ao interagirem com a tecnologia, mais especificamente ao acessar os sistemas do Hospital das Clínicas.
-
-'
+            resposta='Não! Essa plataforma foi feita por uma equipe, de estudantes da FIAP, participante do Desafio fornecido pelo Hospital das Clínicas. Nosso objetivo é auxiliar aqueles que encontram dificuldades ao interagirem com a tecnologia, mais especificamente ao acessar os sistemas do Hospital das Clínicas.'
           />
           <hr className='my-5 border-2 border-[#68bfc2] rounded mx-10 shadow-md w-[80%]' />
         </div>

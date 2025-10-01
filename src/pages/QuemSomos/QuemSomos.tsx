@@ -1,12 +1,17 @@
+import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Integrante from "../../components/Integrante/Integrante";
 
 export default function QuemSomos() {
+  const { open } = useSidebar();
   return (
     <>
-      <div className='absolute right-0 w-full md:w-[77%] lg:w-[81%] xl:w-[84%]' id='estrutura-pagina-menu-selector'>
-        <Header titulo='Quem Somos' icone='./Icons/quem_somos_icon.svg' />
+      <div
+        className={`absolute right-0 z-0 w-full overflow-hidden transition-all duration-300 ${
+          open ? "md:w-[77%] lg:w-[81%] xl:w-[84%]" : "md:w-[93%] lg:w-[94.5%] xl:w-[96%]"
+        }`}>
+        <Header titulo='Quem Somos' icone='./Icons/quem_somos_icon.svg' alt='Ícone com três pessoas, simbolizando os três autores do website.' />
         <Navbar />
         <div className='flex flex-col items-center gap-6 py-8 lg:flex-row lg:flex-wrap lg:justify-center xl:gap-10'>
           <Integrante

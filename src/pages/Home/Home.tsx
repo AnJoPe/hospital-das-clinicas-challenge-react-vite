@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
+import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import Guia from "../../components/Guia/Guia";
 
 export default function Home() {
+  const { open } = useSidebar();
   return (
     <>
-      <div className='absolute right-0 w-full md:w-[77%] lg:w-[81%] xl:w-[84%]' id='estrutura-pagina-menu-selector'>
-        <Header titulo='Portal do Paciente' icone='./Icons/home_icon.svg' />
+      <div
+        className={`absolute right-0 z-0 w-full overflow-hidden transition-all duration-300 ${
+          open ? "md:w-[77%] lg:w-[81%] xl:w-[84%]" : "md:w-[93%] lg:w-[94.5%] xl:w-[96%]"
+        }`}>
+        <Header titulo='Portal do Paciente' icone='./Icons/home_icon.svg' alt='Ícone de Casa simbolizando a home page' />
         <Navbar />
         <div className='flex flex-col m-auto py-7 w-[90%]'>
           <section className='flex flex-col pb-10 gap-2 border-b-2 border-[#8fc3e6] font-[InterItalic]'>
@@ -22,38 +27,30 @@ export default function Home() {
           </section>
           <h2 className='text-[#0077C9] font-[InterItalic] py-5 text-[2.7rem] lg:text-[2.75rem] xl:text-5xl'>Guias de Acesso</h2>
           <ul className='flex flex-col items-start gap-4 text-white font-medium'>
-            <li className='bg-[#8FC3E2] rounded-2xl'>
-              <Link
-                to='registro_paciente'
-                className='flex justify-between items-center gap-3 px-4 py-3 min-w-[350px] lg:min-w-[420px] text-[1.65rem] lg:text-[1.75rem] xl:text-[2rem]'>
-                Portal do Paciente
-                <img src='./Icons/portal_paciente_icon.svg' alt='' className='h-[80%]' />
-              </Link>
-            </li>
-            <li className='bg-[#8FC3E2] rounded-2xl'>
-              <Link
-                to='exames'
-                className='flex justify-between items-center gap-3 px-4 py-3 min-w-[350px] lg:min-w-[420px] text-[1.65rem] lg:text-[1.75rem] xl:text-[2rem]'>
-                Resultados dos Exames
-                <img src='./Icons/exames_icon.svg' alt='' className='h-[80%]' />
-              </Link>
-            </li>
-            <li className='bg-[#8FC3E2] rounded-2xl'>
-              <Link
-                to='prescricoes'
-                className='flex justify-between items-center gap-3 px-4 py-3 min-w-[350px] lg:min-w-[420px] text-[1.65rem] lg:text-[1.75rem] xl:text-[2rem]'>
-                Lista de Prescrições
-                <img src='./Icons/prescricoes_icon.svg' alt='' className='h-[80%]' />
-              </Link>
-            </li>
-            <li className='bg-[#8FC3E2] rounded-2xl'>
-              <Link
-                to='agendamentos'
-                className='flex justify-between items-center gap-3 px-4 py-3 min-w-[350px] lg:min-w-[420px] text-[1.65rem] lg:text-[1.75rem] xl:text-[2rem]'>
-                Lista de Agendamentos
-                <img src='./Icons/agendamentos_icon.svg' alt='' className='h-[80%]' />
-              </Link>
-            </li>
+            <Guia
+              link='registro_paciente'
+              texto='Portal do Paciente'
+              imagem='./Icons/portal_paciente_icon.svg'
+              alt='Ícone da opção Portal do Paciente. Uma figura de uma pessoa, colorida em branco, com um pequeno símbolo de mais, ou adição, do lado.'
+            />
+            <Guia
+              link='exames'
+              texto='Resultados dos Exames'
+              imagem='./Icons/exames_icon.svg'
+              alt='Ícone da opção Resultados dos Exames. Uma figura de um pequeno documento, colorido em branco, com um pequeno símbolo da letra A, com um positivo ao lado.'
+            />
+            <Guia
+              link='prescricoes'
+              texto='Lista de Prescrições'
+              imagem='./Icons/prescricoes_icon.svg'
+              alt='Ícone da opção Lista de Prescrições. Uma figura de um frasco, simbolizando um remédio, colorido em branco.'
+            />
+            <Guia
+              link='agendamentos'
+              texto='Lista de Agendamentos'
+              imagem='./Icons/agendamentos_icon.svg'
+              alt='Ícone da opção Lista de Agendamentos. Uma figura de um pequeno calendário, colorido em branco.'
+            />
           </ul>
         </div>
       </div>
