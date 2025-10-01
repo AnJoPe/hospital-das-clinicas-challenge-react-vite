@@ -1,69 +1,200 @@
-# React + TypeScript + Vite
+# Hospital das Clínicas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=20232A)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Feito-brightgreen?style=for-the-badge)
+![Responsivo](https://img.shields.io/badge/Responsivo-Sim-brightgreen?style=for-the-badge)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ❓ Objetivo do Projeto
 
-## Expanding the ESLint configuration
+Criar uma plataforma web informativa e interativa para o **Hospital das Clínicas**, com o intuito de facilitar o acesso dos pacientes a informações como agendamentos, exames, prescrições, registro, contato e apresentação institucional. O projeto busca oferecer uma experiência visual agradável, organizada e responsiva.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Como Rodar o Projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. Clone este repositório:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+   ```bash
+   git clone https://github.com/AnJoPe/hospital-das-clinicas-challenge-react-vite.git
+   cd hospital-das-clinicas-challenge-react-vite
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Acesse no navegador o endereço indicado pelo Vite (geralmente http://localhost:5173).
+
+---
+
+## 📁 Estrutura de Pastas e Arquivos
+
+Hospital_das_Clinicas
+
+```
+|-- public
+|   |-- Icons
+|   |   |-- abrir_aba.svg
+|   |   |-- agendamentos_icon.svg
+|   |   |-- agendamentos_icon_azul.svg
+|   |   |-- arrow_back_icon.svg
+|   |   |-- contato.svg
+|   |   |-- email.svg
+|   |   |-- email_branco.svg
+|   |   |-- exames_azul_icon.svg
+|   |   |-- exames_icon.svg
+|   |   |-- faq_icon.svg
+|   |   |-- fechar_aba.svg
+|   |   |-- github_icon.png
+|   |   |-- home_icon.svg
+|   |   |-- linkedin_icon.png
+|   |   |-- menu_hamburguer_icon.svg
+|   |   |-- portal_paciente_azul_icon.svg
+|   |   |-- portal_paciente_icon.svg
+|   |   |-- prescricoes_azul_icon.svg
+|   |   |-- prescricoes_icon.svg
+|   |   |-- quem_somos_icon.svg
+|   |   `-- seta_direita_icon.svg
+|   |-- icon.ico
+|   `-- logo_hc.png
+|-- src
+|   |-- assets
+|   |   |-- Guias
+|   |   |   |-- Agendamentos
+|   |   |   |   |-- Telefone
+|   |   |   |   |   `-- etapa_1.png
+|   |   |   |   |-- adendo_1.png
+|   |   |   |   |-- adendo_2.png
+|   |   |   |   |-- etapa_1.png
+|   |   |   |   `-- etapa_2.png
+|   |   |   |-- Exames
+|   |   |   |   |-- Telefone
+|   |   |   |   |   `-- etapa_1.png
+|   |   |   |   |-- adendo_1.png
+|   |   |   |   |-- etapa_1.png
+|   |   |   |   `-- etapa_2.png
+|   |   |   |-- Prescricoes
+|   |   |   |   |-- Telefone
+|   |   |   |   |   `-- etapa_1.png
+|   |   |   |   |-- etapa_1.png
+|   |   |   |   `-- etapa_2.png
+|   |   |   `-- Registro
+|   |   |       |-- Telefone
+|   |   |       |   |-- etapa_1.png
+|   |   |       |   |-- etapa_2.png
+|   |   |       |   |-- etapa_3.png
+|   |   |       |   |-- etapa_4.png
+|   |   |       |   `-- etapa_5.png
+|   |   |       |-- etapa_1.png
+|   |   |       |-- etapa_2.png
+|   |   |       |-- etapa_3.png
+|   |   |       |-- etapa_4.png
+|   |   |       `-- etapa_5.png
+|   |   `-- Integrantes
+|   |       |-- andre_rosa.png
+|   |       |-- jose_diogo.png
+|   |       `-- pedro_miranda.png
+|   |-- components
+|   |   |-- BotaoEtapa
+|   |   |   `-- BotaoEtapa.tsx
+|   |   |-- Guia
+|   |   |   `-- Guia.tsx
+|   |   |-- Header
+|   |   |   `-- Header.tsx
+|   |   |-- ImagemEtapa
+|   |   |   `-- ImagemEtapa.tsx
+|   |   |-- Integrante
+|   |   |   `-- Integrante.tsx
+|   |   |-- Navbar
+|   |   |   `-- Navbar.tsx
+|   |   |-- Pergunta
+|   |   |   `-- Pergunta.tsx
+|   |   `-- Sidebar
+|   |       `-- Sidebar.tsx
+|   |-- context
+|   |   `-- SidebarContext.tsx
+|   |-- fonts
+|   |   |-- Inter-VariableFont_opszwght.ttf
+|   |   |-- Inter_28pt-BoldItalic.ttf
+|   |   |-- Inter_28pt-Italic.ttf
+|   |   `-- Inter_28pt-MediumItalic.ttf
+|   |-- pages
+|   |   |-- Agendamentos
+|   |   |   `-- Agendamentos.tsx
+|   |   |-- Contato
+|   |   |   `-- Contato.tsx
+|   |   |-- Exames
+|   |   |   `-- Exames.tsx
+|   |   |-- FAQ
+|   |   |   `-- FAQ.tsx
+|   |   |-- Home
+|   |   |   `-- Home.tsx
+|   |   |-- Prescricoes
+|   |   |   `-- Prescricoes.tsx
+|   |   |-- QuemSomos
+|   |   |   `-- QuemSomos.tsx
+|   |   `-- RegistroPaciente
+|   |       `-- RegistroPaciente.tsx
+|   |-- App.tsx
+|   |-- index.css
+|   |-- main.tsx
+|   `-- vite-env.d.ts
+|-- .gitignore
+|-- README.MD
+|-- eslint.config.js
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.cjs
+|-- tailwind.config.cjs
+|-- tsconfig.app.json
+|-- tsconfig.json
+|-- tsconfig.node.json
+`-- vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias Utilizadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Vite** – Configuração inicial e execução do projeto
+- **React** – Criação dos componentes da interface
+- **TypeScript** – Tipagem e organização do código
+- **Tailwind CSS** – Estilização responsiva com classes utilitárias
+
+---
+
+## 👥 Integrantes
+
+- **André Rosa** – Sala: 1TDSA | RM: 563112
+- **José Diogo** – Sala: 1TDSA | RM: 562341
+- **Pedro Miranda** – Sala: 1TDSA | RM: 562682
+
+---
+
+## 🔗 Repositório no GitHub
+
+📁 Acesse o repositório completo do projeto:  
+[https://github.com/AnJoPe/hospital-das-clinicas-challenge-react-vite](https://github.com/AnJoPe/hospital-das-clinicas-challenge-react-vite)
+
+---
+
+## 🔗 Apresentação no YouTube
+
+📽️ Acesse a apresentação do projeto:  
+[https://www.youtube.com/watch?v=RFPS3zX47mE](https://www.youtube.com/watch?v=RFPS3zX47mE)
+
+---
