@@ -12,9 +12,9 @@ export default function Agendamentos() {
     function checkWindowSize() {
       const etapa1Imagem = document.getElementById("etapa-1-imagem") as HTMLImageElement;
       if (window.innerWidth < 768) {
-        etapa1Imagem.src = "./src/assets/Guias/Agendamentos/Telefone/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Agendamentos/Telefone/etapa_1.png";
       } else {
-        etapa1Imagem.src = "./src/assets/Guias/Agendamentos/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Agendamentos/etapa_1.png";
       }
     }
     checkWindowSize();
@@ -23,6 +23,7 @@ export default function Agendamentos() {
       window.removeEventListener("resize", checkWindowSize);
     };
   }, []);
+  
   return (
     <>
       <div
@@ -48,7 +49,7 @@ export default function Agendamentos() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]'>
               <ImagemEtapa
-                src='./src/assets/Guias/Agendamentos/etapa_1.png'
+                src='/Guias/Agendamentos/etapa_1.png'
                 alt='Imagem que mostra a página principal do painel do paciente no site do Portal das Clínicas.'
                 id='etapa-1-imagem'
               />
@@ -73,7 +74,7 @@ export default function Agendamentos() {
               <h3 className='font-bold text-[#0077c8] text-2xl sm:text-[1.75rem] md:text-[1.85rem] lg:text-[2rem] xl:text-[2.5rem]'>Etapa 2</h3>
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]'>
-              <ImagemEtapa src='./src/assets/Guias/Agendamentos/etapa_2.png' alt='Imagem que mostra a forma como um agendamento apareceria na tela do usuário.' id='' />
+              <ImagemEtapa src='/Guias/Agendamentos/etapa_2.png' alt='Imagem que mostra a forma como um agendamento apareceria na tela do usuário.' id='' />
               <figcaption className='font-bold mt-2 text-[1.15rem] lg:text-[1rem] xl:text-xl'>
                 Nessa aba, os agendamentos feitos aparecerão listados. Estará informado no agendamento o <span className='text-[#0077c8]'>tipo</span>, a{" "}
                 <span className='text-[#0077c8]'>data/hora</span>, o <span className='text-[#0077c8]'>instituto</span> onde será realizado e a{" "}
@@ -95,7 +96,7 @@ export default function Agendamentos() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]'>
               <ImagemEtapa
-                src='./src/assets/Guias/Agendamentos/adendo_1.png'
+                src='/Guias/Agendamentos/adendo_1.png'
                 alt='Imagem que mostra o documento da filipeta, com informações sobre o agendamento, por exemplo: tipo de agendamento.'
                 id=''
               />
@@ -120,7 +121,7 @@ export default function Agendamentos() {
               <h3 className='font-bold text-[#0077c8] text-2xl sm:text-[1.75rem] md:text-[1.85rem] lg:text-[2rem] xl:text-[2.5rem]'>Adendo 2</h3>
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]'>
-              <ImagemEtapa src='./src/assets/Guias/Agendamentos/adendo_2.png' alt='Imagem que mostra os ícones e os tipos de agendamentos possíveis de aparecer.' id='' />
+              <ImagemEtapa src='/Guias/Agendamentos/adendo_2.png' alt='Imagem que mostra os ícones e os tipos de agendamentos possíveis de aparecer.' id='' />
               <figcaption className='font-bold mt-2 text-[1.15rem] lg:text-[1rem] xl:text-xl'>
                 Agendamentos aparecerão com um desses <span className='text-[#0077c8]'>quatro ícones</span>, indicando o{" "}
                 <span className='text-[#0077c8]'>tipo do agendamento</span>. São apenas indicações para que o paciente tenha ciência de como deve se{" "}

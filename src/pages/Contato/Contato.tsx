@@ -1,5 +1,5 @@
-import { useSidebar } from "../../context/SidebarContext";
 import { useState } from "react";
+import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -52,14 +52,14 @@ export default function Contato() {
   }
 
   const getFormClass = (campoErro: boolean) =>
-    `flex flex-col self-center items-center w-[90%] p-4 gap-4 border-2 rounded-[20px] ${campoErro ? "border-[#FF0000]" : "border-[#0077C8]"}`;
+    `flex flex-col self-center items-center w-[90%] p-4 gap-4 rounded-[20px] border-2 ${campoErro ? "border-[#FF0000]" : "border-[#0077C8]"}`;
 
   const getLabelClass = (campoErro: boolean) =>
-    `flex flex-col font-bold w-full sm:w-[45%] md:text-[1.2rem] ${campoErro ? "text-[#FF0000]" : "text-[#0077C8] lg:text-xl"}`;
+    `flex flex-col font-bold w-full sm:w-[45%] md:text-[1.2rem] lg:text-xl ${campoErro ? "text-[#FF0000]" : "text-[#0077C8]"}`;
 
   const getInputClass = (campoErro: boolean, isTextArea = false) =>
-    `${isTextArea ? "border rounded-xl mt-2 p-2 h-[110px] lg:h-[120px]" : "border-b-2"} font-normal text-black p-2 text-[0.95rem] md:text-[1rem] outline-none ${
-      campoErro ? "border-[#FF0000]" : "border-[#0077C8] lg:text-xl"
+    `${isTextArea ? "border rounded-xl mt-2 p-2 h-[110px] lg:h-[120px]" : "border-b-2"} font-normal text-black p-2 text-base lg:text-xl outline-none ${
+      campoErro ? "border-[#FF0000]" : "border-[#0077C8]"
     }`;
 
   const buttonClass = `relative flex items-center justify-around self-end rounded-lg p-2 bg-[#0077C8] transition-all duration-300 h-10 shadow ${
@@ -80,7 +80,7 @@ export default function Contato() {
           <section className='flex flex-col sm:flex-row justify-center w-[90%] lg:h-[28vh]'>
             <div className='flex flex-col justify-around items-start w-full h-full lg:w-[60%]'>
               <h3 className='text-[#0077C8] font-bold font-[InterItalic] mb-3 w-[70%] lg:w-[75%] text-2xl'>Entre em contato com o Hospital das Clínicas</h3>
-              <ul className='flex flex-col gap-3 text-[1.15rem] sm:text-[1rem] lg:text-[1.2rem] xl:text-xl'>
+              <ul className='flex flex-col gap-3 text-[1.15rem] sm:text-base lg:text-[1.2rem] xl:text-xl'>
                 <li className='flex items-center gap-2'>
                   <span className='font-bold'>Tel.:</span>(11) 2661-1048
                   <img src='./Icons/contato.svg' alt='Ícone de um telefone, sinalizando que o número descrito pode ser contatado via telefone.' className='h-5 lg:h-7' />
@@ -97,7 +97,7 @@ export default function Contato() {
             </div>
             <div className='flex flex-col justify-evenly items-start w-full h-full lg:w-[40%]'>
               <h3 className='text-[#0077C8] font-bold font-[InterItalic] mb-3 text-2xl'>Endereço</h3>
-              <ul className='flex flex-col gap-2 text-[1.15rem] sm:text-[1rem] lg:text-[1.2rem] xl:text-xl'>
+              <ul className='flex flex-col gap-2 text-[1.15rem] sm:text-base lg:text-[1.2rem] xl:text-xl'>
                 <li className='flex items-center gap-2'>Av. Dr. Enéas de Carvalho Aguiar, 255</li>
                 <li className='flex items-center gap-2'>
                   <span className='font-bold'>Bairro:</span> Cerqueira César
@@ -111,7 +111,7 @@ export default function Contato() {
           </section>
           <section className='flex flex-col justify-between w-full md:w-[85%] lg:w-[75%]'>
             <h2 className='text-[#0077C8] font-bold font-[InterItalic] ml-6 text-2xl lg:text-4xl'>Estamos aqui para ajudar!</h2>
-            <h4 className='text-[#0077C8] ml-6 mb-4 text-[1rem]'>Nos envie um email!</h4>
+            <h4 className='text-[#0077C8] ml-6 mb-4 text-base'>Nos envie um email!</h4>
             <form className={getFormClass(erros.nome || erros.email || erros.assunto || erros.corpo)} onSubmit={enviarForm}>
               <div className='flex flex-col sm:flex-row justify-around w-full gap-4'>
                 <label htmlFor='nomeInput' className={getLabelClass(erros.nome)}>

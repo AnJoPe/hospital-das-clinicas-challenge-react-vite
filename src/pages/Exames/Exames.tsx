@@ -12,9 +12,9 @@ export default function Exames() {
     function checkWindowSize() {
       const etapa1Imagem = document.getElementById("etapa-1-imagem") as HTMLImageElement;
       if (window.innerWidth < 768) {
-        etapa1Imagem.src = "./src/assets/Guias/Exames/Telefone/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Exames/Telefone/etapa_1.png";
       } else {
-        etapa1Imagem.src = "./src/assets/Guias/Exames/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Exames/etapa_1.png";
       }
     }
     checkWindowSize();
@@ -48,7 +48,7 @@ export default function Exames() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-1'>
               <ImagemEtapa
-                src='../src/assets/Guias/Exames/etapa_1.png'
+                src='/Guias/Exames/etapa_1.png'
                 alt='Imagem que mostra a página principal do painel do paciente no site do Portal das Clínicas.'
                 id='etapa-1-imagem'
               />
@@ -74,7 +74,7 @@ export default function Exames() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
               <ImagemEtapa
-                src='./src/assets/Guias/Exames/etapa_2.png'
+                src='/Guias/Exames/etapa_2.png'
                 alt='Imagem que mostra a forma como o resultado de um exame apareceria na tela do usuário.'
                 id=''
               />
@@ -98,7 +98,7 @@ export default function Exames() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
               <ImagemEtapa
-                src='./src/assets/Guias/Exames/adendo_1.png'
+                src='/Guias/Exames/adendo_1.png'
                 alt='Imagem que mostra os ícones e os tipos de resultaods de exames possíveis de aparecer.'
                 id=''
               />

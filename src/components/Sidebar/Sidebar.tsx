@@ -20,7 +20,7 @@ export default function Sidebar() {
           />
           <img src='./logo_hc.png' alt='Logo do Hospital das Clínicas' className='w-[70%] xl:w-[75%]' />
           <ul
-            className={`flex flex-col w-[70%] gap-4 font-[InterItalic] font-bold text-[#0077C9] text-2xl lg:text-[1.65rem] xl:text-[2rem] ${open ? "" : "mr-32"}`}
+            className={`flex flex-col w-[70%] gap-4 font-[InterItalic] font-bold text-[#0077C8] text-2xl lg:text-[1.65rem] xl:text-[2rem] ${open ? "" : "mr-32"}`}
             id='lista-links-menu-selector'>
             <li>
               <Link to='/' className='flex justify-between items-center h-[75px] gap-3'>
@@ -47,6 +47,15 @@ export default function Sidebar() {
               </Link>
             </li>
           </ul>
+
+          <Link
+            to='/login'
+            className={`flex justify-between items-center absolute bottom-5 w-[70%] gap-3 font-[InterItalic] font-bold text-[#0077C8] text-2xl lg:text-[1.65rem] xl:text-[2rem] ${
+              open ? "" : "mr-32"
+            }`}>
+            Login
+            <img src='./Icons/login_icon.svg' className='h-[45%]' />
+          </Link>
         </div>
       </nav>
     </>

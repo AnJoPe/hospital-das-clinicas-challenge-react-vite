@@ -12,9 +12,9 @@ export default function Prescricoes() {
     function checkWindowSize() {
       const etapa1Imagem = document.getElementById("etapa-1-imagem") as HTMLImageElement;
       if (window.innerWidth < 768) {
-        etapa1Imagem.src = "./src/assets/Guias/Prescricoes/Telefone/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Prescricoes/Telefone/etapa_1.png";
       } else {
-        etapa1Imagem.src = "./src/assets/Guias/Prescricoes/etapa_1.png";
+        etapa1Imagem.src = "/Guias/Prescricoes/etapa_1.png";
       }
     }
     checkWindowSize();
@@ -44,7 +44,7 @@ export default function Prescricoes() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-1'>
               <ImagemEtapa
-                src='../src/assets/Guias/Prescricoes/etapa_1.png'
+                src='/Guias/Prescricoes/etapa_1.png'
                 alt='Imagem que mostra a página principal do painel do paciente no site do Portal das Clínicas.'
                 id='etapa-1-imagem'
               />
@@ -69,7 +69,7 @@ export default function Prescricoes() {
               <h3 className='font-bold text-[#0077c8] text-2xl sm:text-[1.75rem] md:text-[1.85rem] lg:text-[2rem] xl:text-[2.5rem]'>Etapa 2</h3>
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
-              <ImagemEtapa src='./src/assets/Guias/Prescricoes/etapa_2.png' alt='Imagem que mostra a forma como uma prescrição apareceria na tela do usuário.' id='' />
+              <ImagemEtapa src='/Guias/Prescricoes/etapa_2.png' alt='Imagem que mostra a forma como uma prescrição apareceria na tela do usuário.' id='' />
               <figcaption className='font-bold mt-2 text-[1.15rem] lg:text-[1rem] xl:text-xl'>
                 Nessa aba, as <span className='text-[#0077c8]'>prescrições receitadas</span> por médicos aparecerão por{" "}
                 <span className='text-[#0077c8]'>ordem decrescente de vencimento</span>. É possível <span className='text-[#0077c8]'>imprimir</span> ou{" "}

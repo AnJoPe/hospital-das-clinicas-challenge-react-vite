@@ -16,17 +16,17 @@ export default function RegistroPaciente() {
       const etapa4Imagem = document.getElementById("etapa-4-imagem") as HTMLImageElement;
       const etapa5Imagem = document.getElementById("etapa-5-imagem") as HTMLImageElement;
       if (window.innerWidth < 768) {
-        etapa1Imagem.src = "./src/assets/Guias/Registro/Telefone/etapa_1.png";
-        etapa2Imagem.src = "./src/assets/Guias/Registro/Telefone/etapa_2.png";
-        etapa3Imagem.src = "./src/assets/Guias/Registro/Telefone/etapa_3.png";
-        etapa4Imagem.src = "./src/assets/Guias/Registro/Telefone/etapa_4.png";
-        etapa5Imagem.src = "./src/assets/Guias/Registro/Telefone/etapa_5.png";
+        etapa1Imagem.src = "/Guias/Registro/Telefone/etapa_1.png";
+        etapa2Imagem.src = "/Guias/Registro/Telefone/etapa_2.png";
+        etapa3Imagem.src = "/Guias/Registro/Telefone/etapa_3.png";
+        etapa4Imagem.src = "/Guias/Registro/Telefone/etapa_4.png";
+        etapa5Imagem.src = "/Guias/Registro/Telefone/etapa_5.png";
       } else {
-        etapa1Imagem.src = "./src/assets/Guias/Registro/etapa_1.png";
-        etapa2Imagem.src = "./src/assets/Guias/Registro/etapa_2.png";
-        etapa3Imagem.src = "./src/assets/Guias/Registro/etapa_3.png";
-        etapa4Imagem.src = "./src/assets/Guias/Registro/etapa_4.png";
-        etapa5Imagem.src = "./src/assets/Guias/Registro/etapa_5.png";
+        etapa1Imagem.src = "/Guias/Registro/etapa_1.png";
+        etapa2Imagem.src = "/Guias/Registro/etapa_2.png";
+        etapa3Imagem.src = "/Guias/Registro/etapa_3.png";
+        etapa4Imagem.src = "/Guias/Registro/etapa_4.png";
+        etapa5Imagem.src = "/Guias/Registro/etapa_5.png";
       }
     }
     checkWindowSize();
@@ -60,7 +60,7 @@ export default function RegistroPaciente() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-1'>
               <ImagemEtapa
-                src='./src/assets/Guias/Registro/etapa_1.png'
+                src='/Guias/Registro/etapa_1.png'
                 alt='Imagem que mostra a página inicial ao acessar o portal do paciente. Todas as formas de login estão visiveis: com o painel de login, com a etiqueta física de paciente e com o registro do gov.br.'
                 id='etapa-1-imagem'
               />
@@ -87,7 +87,7 @@ export default function RegistroPaciente() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
               <ImagemEtapa
-                src='./src/assets/Guias/Registro/etapa_2.png'
+                src='/Guias/Registro/etapa_2.png'
                 alt='Imagem que mostra a página de login pelo próprio portal do paciente do Hospital das Clínicas.'
                 id='etapa-2-imagem'
               />
@@ -112,7 +112,7 @@ export default function RegistroPaciente() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
               <ImagemEtapa
-                src='./src/assets/Guias/Registro/etapa_3.png'
+                src='/Guias/Registro/etapa_3.png'
                 alt='Imagem que mostra a página de login utilizando a etiqueta física de paciente do Hospital das Clínicas.'
                 id='etapa-3-imagem'
               />
@@ -136,7 +136,7 @@ export default function RegistroPaciente() {
               <h3 className='font-bold text-[#0077c8] text-2xl sm:text-[1.75rem] md:text-[1.85rem] lg:text-[2rem] xl:text-[2.5rem]'>Etapa 2.3</h3>
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
-              <ImagemEtapa src='./src/assets/Guias/Registro/etapa_4.png' alt='Imagem que mostra a página de login do gov.br.' id='etapa-4-imagem' />
+              <ImagemEtapa src='/Guias/Registro/etapa_4.png' alt='Imagem que mostra a página de login do gov.br.' id='etapa-4-imagem' />
               <figcaption className='font-bold mt-2 text-[1.15rem] lg:text-[1rem] xl:text-xl'>
                 Para acessar a <span className='text-[#0077c8]'>plataforma</span> utilizando sua conta do <span className='text-[#0077c8]'>gov.br</span>, você deverá
                 inserir o seu <span className='text-[#0077c8]'>CPF</span> e, em seguida, inserir a sua <span className='text-[#0077c8]'>senha</span>.
@@ -157,7 +157,7 @@ export default function RegistroPaciente() {
             </div>
             <figure className='flex flex-col items-center mt-4 w-[85%]' id='etapa-imagem-2'>
               <ImagemEtapa
-                src='./src/assets/Guias/Registro/etapa_5.png'
+                src='/Guias/Registro/etapa_5.png'
                 alt='Imagem que mostra a página principal do painel do paciente no site do Portal das Clínicas.'
                 id='etapa-5-imagem'
               />
