@@ -1,34 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import type { Paciente } from "../../Types/PacienteType";
+import type { Endereco } from "../../Types/EnderecoType";
+import type { Convenio } from "../../Types/ConvenioType";
 import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-
-type Paciente = {
-  nomePaciente: string;
-  idade: string;
-  altura: string;
-  peso: string;
-  rg: string;
-  cpf: string;
-  telefone: string;
-  endereco: Endereco;
-  sexo: string;
-};
-type Endereco = {
-  logradouro: string;
-  numero: string;
-  bairro: string;
-  cidade: string;
-  cep: string;
-};
-type Convenio = {
-  operadora: string;
-  numeroCarteirinha: string;
-  dataInicio: string;
-  dataValidade: string;
-};
 
 export default function Cadastro() {
   const { open } = useSidebar();

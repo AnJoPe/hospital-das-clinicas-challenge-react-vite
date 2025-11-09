@@ -46,14 +46,46 @@ Hospital_das_Clinicas
 
 ```
 |-- public
+|   |-- Guias
+|   |   |-- Agendamentos
+|   |   |   |-- Telefone
+|   |   |   |   `-- etapa_1.png
+|   |   |   |-- adendo_1.png
+|   |   |   |-- adendo_2.png
+|   |   |   |-- etapa_1.png
+|   |   |   `-- etapa_2.png
+|   |   |-- Exames
+|   |   |   |-- Telefone
+|   |   |   |   `-- etapa_1.png
+|   |   |   |-- adendo_1.png
+|   |   |   |-- etapa_1.png
+|   |   |   `-- etapa_2.png
+|   |   |-- Prescricoes
+|   |   |   |-- Telefone
+|   |   |   |   `-- etapa_1.png
+|   |   |   |-- etapa_1.png
+|   |   |   `-- etapa_2.png
+|   |   `-- Registro
+|   |       |-- Telefone
+|   |       |   |-- etapa_1.png
+|   |       |   |-- etapa_2.png
+|   |       |   |-- etapa_3.png
+|   |       |   |-- etapa_4.png
+|   |       |   `-- etapa_5.png
+|   |       |-- etapa_1.png
+|   |       |-- etapa_2.png
+|   |       |-- etapa_3.png
+|   |       |-- etapa_4.png
+|   |       `-- etapa_5.png
 |   |-- Icons
 |   |   |-- abrir_aba.svg
 |   |   |-- agendamentos_icon.svg
 |   |   |-- agendamentos_icon_azul.svg
 |   |   |-- arrow_back_icon.svg
+|   |   |-- cadastro_icon.svg
 |   |   |-- contato.svg
+|   |   |-- email_branco_icon.svg
 |   |   |-- email.svg
-|   |   |-- email_branco.svg
 |   |   |-- exames_azul_icon.svg
 |   |   |-- exames_icon.svg
 |   |   |-- faq_icon.svg
@@ -61,52 +93,22 @@ Hospital_das_Clinicas
 |   |   |-- github_icon.png
 |   |   |-- home_icon.svg
 |   |   |-- linkedin_icon.png
+|   |   |-- login_icon.svg
 |   |   |-- menu_hamburguer_icon.svg
+|   |   |-- perfil_icon.svg
 |   |   |-- portal_paciente_azul_icon.svg
 |   |   |-- portal_paciente_icon.svg
 |   |   |-- prescricoes_azul_icon.svg
 |   |   |-- prescricoes_icon.svg
 |   |   |-- quem_somos_icon.svg
 |   |   `-- seta_direita_icon.svg
+|   |-- Integrantes
+|   |   |-- andre_rosa.png
+|   |   |-- jose_diogo.png
+|   |   `-- pedro_miranda.png
 |   |-- icon.ico
 |   `-- logo_hc.png
 |-- src
-|   |-- assets
-|   |   |-- Guias
-|   |   |   |-- Agendamentos
-|   |   |   |   |-- Telefone
-|   |   |   |   |   `-- etapa_1.png
-|   |   |   |   |-- adendo_1.png
-|   |   |   |   |-- adendo_2.png
-|   |   |   |   |-- etapa_1.png
-|   |   |   |   `-- etapa_2.png
-|   |   |   |-- Exames
-|   |   |   |   |-- Telefone
-|   |   |   |   |   `-- etapa_1.png
-|   |   |   |   |-- adendo_1.png
-|   |   |   |   |-- etapa_1.png
-|   |   |   |   `-- etapa_2.png
-|   |   |   |-- Prescricoes
-|   |   |   |   |-- Telefone
-|   |   |   |   |   `-- etapa_1.png
-|   |   |   |   |-- etapa_1.png
-|   |   |   |   `-- etapa_2.png
-|   |   |   `-- Registro
-|   |   |       |-- Telefone
-|   |   |       |   |-- etapa_1.png
-|   |   |       |   |-- etapa_2.png
-|   |   |       |   |-- etapa_3.png
-|   |   |       |   |-- etapa_4.png
-|   |   |       |   `-- etapa_5.png
-|   |   |       |-- etapa_1.png
-|   |   |       |-- etapa_2.png
-|   |   |       |-- etapa_3.png
-|   |   |       |-- etapa_4.png
-|   |   |       `-- etapa_5.png
-|   |   `-- Integrantes
-|   |       |-- andre_rosa.png
-|   |       |-- jose_diogo.png
-|   |       `-- pedro_miranda.png
 |   |-- components
 |   |   |-- BotaoEtapa
 |   |   |   `-- BotaoEtapa.tsx
@@ -134,6 +136,8 @@ Hospital_das_Clinicas
 |   |-- pages
 |   |   |-- Agendamentos
 |   |   |   `-- Agendamentos.tsx
+|   |   |-- Cadastro
+|   |   |   `-- Cadastro.tsx
 |   |   |-- Contato
 |   |   |   `-- Contato.tsx
 |   |   |-- Exames
@@ -142,6 +146,10 @@ Hospital_das_Clinicas
 |   |   |   `-- FAQ.tsx
 |   |   |-- Home
 |   |   |   `-- Home.tsx
+|   |   |-- Login
+|   |   |   `-- Login.tsx
+|   |   |-- Perfil
+|   |   |   `-- Perfil.tsx
 |   |   |-- Prescricoes
 |   |   |   `-- Prescricoes.tsx
 |   |   |-- QuemSomos
@@ -153,12 +161,12 @@ Hospital_das_Clinicas
 |   |-- main.tsx
 |   `-- vite-env.d.ts
 |-- .gitignore
-|-- README.MD
 |-- eslint.config.js
 |-- index.html
 |-- package-lock.json
 |-- package.json
 |-- postcss.config.cjs
+|-- README.MD
 |-- tailwind.config.cjs
 |-- tsconfig.app.json
 |-- tsconfig.json
@@ -174,6 +182,7 @@ Hospital_das_Clinicas
 - **React** – Criação dos componentes da interface
 - **TypeScript** – Tipagem e organização do código
 - **Tailwind CSS** – Estilização responsiva com classes utilitárias
+- **API Java** – Conexão do Front-end com o Back-end
 
 ---
 
@@ -192,9 +201,18 @@ Hospital_das_Clinicas
 
 ---
 
+---
+
+## 🔗 Projeto na Vercel
+
+📁 Acesse o projeto pela Vercel:  
+[https://hospital-das-clinicas-challenge-rea.vercel.app/](https://hospital-das-clinicas-challenge-rea.vercel.app/)
+
+---
+
 ## 🔗 Apresentação no YouTube
 
 📽️ Acesse a apresentação do projeto:  
-[https://www.youtube.com/watch?v=RFPS3zX47mE](https://www.youtube.com/watch?v=RFPS3zX47mE)
+[]()
 
 ---

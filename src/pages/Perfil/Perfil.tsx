@@ -1,35 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import type { Paciente } from "../../Types/PacienteType";
+import type { Convenio } from "../../Types/ConvenioType";
 import { useSidebar } from "../../context/SidebarContext";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-
-type Paciente = {
-  id: number;
-  nomePaciente: string;
-  idade: number;
-  altura: number;
-  peso: number;
-  rg: string;
-  cpf: string;
-  telefone: string;
-  sexo: string;
-  endereco: {
-    logradouro: string;
-    numero: string;
-    bairro: string;
-    cidade: string;
-    cep: string;
-  };
-};
-
-type Convenio = {
-  id: number;
-  operadora: string;
-  numeroCarteirinha: string;
-  dataInicio: string;
-  dataValidade: string;
-};
 
 export default function Perfil() {
   const { open } = useSidebar();
